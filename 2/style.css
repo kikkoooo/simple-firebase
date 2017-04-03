@@ -1,0 +1,56 @@
+.message {
+  margin: 10px 0;
+  padding: 10px;
+  width: 100%;
+  background-color: #efefef;
+}
+
+#username, #text {
+  margin: 5px 0px;
+}
+
+#post {
+  padding: 0.5em 1em;
+  background-color: #50b1ff;
+  border: none;
+  color: #FFF;
+}
+
+
+
+/* DON'T DELETE THIS */
+
+html {
+  box-sizing: border-box;
+}
+
+*,*:before,*:after {
+  box-sizing: inherit;
+}
+
+body {
+  margin: 0;
+}
+
+/* Clear Float */
+
+.cf:before,.cf:after {
+  content: " ";
+  /* 1 */
+  display: table;
+  /* 2 */
+}
+
+.cf:after {
+  clear: both;
+}
+
+.cf {
+  *zoom: 1;
+}
+
+.box {
+  border: 1px solid red;
+  padding: 20px;
+  background: pink;
+}
