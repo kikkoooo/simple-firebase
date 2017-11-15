@@ -11,25 +11,41 @@ $(document).ready(function() {
   };
   firebase.initializeApp(config);
 
+
   // Establish to identify which branch of our Firebase Database
   var mainBranch = firebase.database().ref();
 
   // Send Data to Firebase
-  $('.button').click(function() {
-    //alert("OMG");
-    var messageToSend = "I love you";
-    // Pushes a new item to our Firebase database
+  $('#send-button').click(function() {
+    var userName = $('#message-username').text();
+    var userMessage = $('#message-box').text();
     mainBranch.push({
-      specialMessage: messageToSend
+      username : userName,
+      message : userMessage
     });
+
+    // Empty out the divs
+    $('#message-username').html('');
+    $('#message-box').html('');
+
   })
 
   // Recieve Data from Firebase
   var getDataFromFirebase = function() {
     mainBranch.on('child_added', function(myFirebaseItem) {
+
+      // Access the child of the main branch
       var firebaseChild = myFirebaseItem.val();
-      var theActualMessage = firebaseChild.specialMessage;
-      $('.box').append(theActualMessage);
+
+      // Get the message metadata
+      var userMessage = firebaseChild.message;
+
+      // Get the username metadata
+      var userName = firebaseChild.username;
+
+      // $('#messages').append(userMessage + ' by ' + userName);
+      $('#messages').append('<div class="message">' + userMessage + ' by ' + userName + '</div>');
+
     });
   }
 
