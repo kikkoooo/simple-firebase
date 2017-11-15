@@ -1,27 +1,3 @@
-#storage {
-    border: 1px solid blue;
-    background: pink;
-}
-
-.user-texts {
-    border: 1px dashed orange;
-    padding: 10px;
-    background: blue;
-    color: red;
-}
-
-
-#message {
-  padding: 20px;
-  border: 2px solid red;
-}
-
-
-#send-btn {
-  padding: 20px;
-  border: 2px solid blue;
-}
-
 .message {
   margin: 10px 0;
   padding: 10px;
@@ -54,8 +30,6 @@ html {
 
 body {
   margin: 0;
-  font-size: 20px;
-  font-family: arial;
 }
 
 /* Clear Float */

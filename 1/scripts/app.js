@@ -9,65 +9,55 @@ $(document).ready(function() {
     storageBucket: "simple-chat-de1c7.appspot.com",
     messagingSenderId: "1045690062525"
   };
-
   firebase.initializeApp(config);
 
-  // For Firebase
+
   var rootRef = firebase.database().ref();
 
-  var usernameInput = $("#username");
-  var textInput = $("#text");
-  var faveColorInput = $("#fave-color");
 
-  var postButton = $("#post");
-  var loginButton = $("#login");
-
-  var username = null;
-
-
-
-  // On click
-  postButton.click(function() {
-
-    var msgUser = usernameInput.val();
-    var msgText = textInput.val();
-    var msgFaveColor = faveColorInput.val();
+  // On click button push item to FB database
+  $('#send-btn').click(function() {
+      var message = $('#message').text();
+      // Pushes a new item to our Firebase database
+      rootRef.push({
+        specialMessage: message,
+        //  myFavMusic: 'dub',
+      });
+  })
 
 
-    rootRef.push({
-      username: msgUser,
-      text: msgText,
-      favoriteColor: msgFaveColor
-    });
-
-    textInput.value = "";
-
-  });
 
 
-  /** Function to add a data listener **/
+
+  // Function to add a data listener
   var startListening = function() {
 
-    rootRef.on('child_added', function(snapshot) {
+    // When a new item is added to the FB database then do this...
+    rootRef.on('child_added', function(ourDatabaseKid) {
 
-      var msg = snapshot.val();
+      // Establish a name for each item/child
+      var textInputFromUsers = ourDatabaseKid.val();
+      var theActualMessage = textInputFromUsers.specialMessage;
 
-      var msgUsernameElement = msg.username;
-      var msgTextElement = msg.text;
-      var msgfavoriteColorElement = msg.favoriteColor;
-
-
-      var html =	'<div class="message">' +
-      					    '<span>' + msgUsernameElement + ': </span>' + 
-      					    '<span>' + msgTextElement + '</span>' +
-                    '<span>' + msgfavoriteColorElement + '</span>' +
-      				    '</div>';
-
-      $("#results").prepend(html);
+      if (theActualMessage == 'red' || theActualMessage == 'RED') {
+        $('#container').removeClass('black');
+        $('#container').addClass('red');
+      } else if (theActualMessage == 'black' || theActualMessage == 'BLACK') {
+        $('#container').removeClass('red');
+        $('#container').addClass('black');
+      }
+//      $('#storage').append('<div class="d">' + theActualMessage + '</div>')
 
     });
+
+
   };
 
   startListening();
+
+
+
+
+
 
 });
