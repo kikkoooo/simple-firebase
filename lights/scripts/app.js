@@ -12,7 +12,7 @@ $(document).ready(function() {
   firebase.initializeApp(config);
 
   // Refers to the main Firebase Database branch
-  var mainSwitchBranch = firebase.database().ref();
+  var mainSwitchBranch = firebase.database().ref('jennifer-clicks');
 
   //
   // INPUT

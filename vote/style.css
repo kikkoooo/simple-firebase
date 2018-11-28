@@ -1,0 +1,107 @@
+/* INPUT  */
+#ballot {
+  width: 100vw;
+  height: 100vh;
+}
+
+.btn {
+  height: 50%;
+  width: 100%;
+  position: relative;
+}
+
+.btn .title {
+  position: absolute;
+  transform: translate(-50%,-50%);
+  top: 50%;
+  left: 50%;
+  color: gray;
+}
+
+#ballot #btn-yes {
+  background: blue;
+}
+
+#ballot #btn-no {
+  background: pink;
+}
+
+/* OUTPUT */
+#polls {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+}
+
+#polls .column {
+  float: left;
+  width: 50vw;
+  height: 100vh;
+  position: relative;
+}
+
+#vote-yes-count.column {
+  background: blue;
+}
+
+#vote-no-count.column {
+  background: pink;
+}
+
+#polls .column .title {
+  position: absolute;
+  transform: translate(-50%,-50%);
+  top: 50%;
+  left: 50%;
+  color: gray;
+}
+
+.graph  {
+  width: 100%;
+  height: 10px;
+  background: black;
+  position: absolute;
+  bottom: 0;
+}
+
+
+/* DON'T DELETE THIS */
+
+html {
+  box-sizing: border-box;
+}
+
+*,*:before,*:after {
+  box-sizing: inherit;
+}
+
+body {
+  margin: 0;
+  font-size: 10vw;
+  font-family: arial;
+}
+
+/* Clear Float */
+
+.cf:before,.cf:after {
+  content: " ";
+  /* 1 */
+  display: table;
+  /* 2 */
+}
+
+.cf:after {
+  clear: both;
+}
+
+.cf {
+  *zoom: 1;
+}
+
+.box {
+  border: 1px solid red;
+  padding: 20px;
+  background: pink;
+}
