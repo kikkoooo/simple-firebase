@@ -1,0 +1,42 @@
+body {
+  background: #000;
+  color: #FFF;
+  font-size: 8vw;
+  font-family: Helvetica, arial, sans-serif;
+}
+
+.not-lame {
+  background: blue;
+  color: red;
+}
+
+.lame {
+  background: white;
+  color: black;
+  font-family: fantasy;
+}
+
+/* DON'T DELETE THIS */
+html {
+  box-sizing: border-box; }
+
+*, *:before, *:after {
+  box-sizing: inherit; }
+
+body {
+  margin: 0; }
+
+/* Clear Float */
+.cf:before, .cf:after {
+  content: " ";
+  /* 1 */
+  display: table;
+  /* 2 */ }
+
+.cf:after {
+  clear: both; }
+
+.cf {
+  *zoom: 1; }
+
+/*# sourceMappingURL=style.css.map */

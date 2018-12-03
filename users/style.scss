@@ -1,0 +1,106 @@
+body {
+  background: #000;
+  color: #FFF;
+  font-size: 8vw;
+  font-family: Helvetica, arial, sans-serif;
+
+  &.paused {
+    background: red;
+  }
+
+  &.reset {
+    background: grey;
+  }
+
+}
+
+#line {
+  top: 0;
+  left: 50%;
+  position: fixed;
+  background: red;
+  width: 2px;
+  height: 100%;
+  z-index: -1;
+}
+
+#controller {
+
+  .btn {
+    cursor: pointer;
+   }
+
+  .top {
+    padding: .2em .2em .5em .2em;
+  }
+
+  .bottom {
+    padding: .7em .2em .3em .2em;
+  }
+
+  .top, .bottom {
+
+    div {
+      float: left;
+      width: 50%;
+    }
+  }
+
+  .middle {
+    text-align: center;
+
+    .btn {
+      height: 50%;
+      position: relative;
+
+      span {
+        position: absolute;
+        display: block;
+        width: 100%;
+        left: 0;
+        top: 50%;
+        transform: translateY(-50%);
+        -ms-transform: translateY(-50%);
+        -webkit-transform: translateY(-50%);
+        -moz-transform: translateY(-50%);
+      }
+    }
+  }
+
+
+  .play {
+    display: none;
+  }
+}
+
+
+/* DON'T DELETE THIS */
+
+html {
+  box-sizing: border-box;
+}
+
+*,*:before,*:after {
+  box-sizing: inherit;
+}
+
+body {
+  margin: 0;
+}
+
+/* Clear Float */
+
+.cf:before,.cf:after {
+  content: " ";
+  /* 1 */
+  display: table;
+  /* 2 */
+}
+
+.cf:after {
+  clear: both;
+}
+
+.cf {
+  *zoom: 1;
+}
