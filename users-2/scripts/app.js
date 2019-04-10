@@ -2,7 +2,7 @@ $(document).ready(function() {
 
   // Initialize Firebase
   var config = {
-    apiKey: "AIzaSyDy3ckPNoeSml0VlFenkbPVYMqq2rf2SSU",
+    apiKey: "",
     authDomain: "comm-platform.firebaseapp.com",
     databaseURL: "https://comm-platform.firebaseio.com",
     projectId: "comm-platform",
