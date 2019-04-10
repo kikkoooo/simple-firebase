@@ -1,0 +1,89 @@
+#main {
+  margin: .25em;
+}
+
+#login, #save {
+  border: 1px solid;
+  padding: .25em;
+  cursor: pointer;
+}
+
+#login, #save, #profile .uid, #profile input {
+  display: block;
+  float: left;
+  clear: left;
+  margin-bottom: .25em;
+}
+
+input {
+  font-size: 1em;
+  color: inherit;
+  float: left;
+  padding: .5em;
+  border-radius: 0;
+  appearance: none;
+  -moz-appearance: none;
+  -webkit-appearance: none;
+  border-radius: 0;
+  -moz-border-radius: 0;
+  -webkit-border-radius: 0;
+  background: none;
+  box-shadow: none;
+  /* margin: 0; */
+  border: 0;
+}
+
+input.input-field {
+  border: 1px solid;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* DON'T DELETE THIS */
+
+html {
+  box-sizing: border-box;
+}
+
+*,*:before,*:after {
+  box-sizing: inherit;
+}
+
+body {
+  margin: 0;
+  font-size: 2vw;
+  font-family: helvetica;
+}
+
+/* Clear Float */
+
+.cf:before,.cf:after {
+  content: " ";
+  /* 1 */
+  display: table;
+  /* 2 */
+}
+
+.cf:after {
+  clear: both;
+}
+
+.cf {
+  *zoom: 1;
+}
+
+.box {
+  border: 1px solid red;
+  padding: 20px;
+  background: pink;
+}

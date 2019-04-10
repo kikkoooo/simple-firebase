@@ -11,18 +11,23 @@ $(document).ready(function() {
   };
   firebase.initializeApp(config);
 
+
   // Establish to identify which branch of our Firebase Database
   var mainBranch = firebase.database().ref();
 
+
+
   // Send Data to Firebase
   $('.button').click(function() {
-    //alert("OMG");
-    var messageToSend = "I love you";
+    var messageToSend = "I hate you";
     // Pushes a new item to our Firebase database
     mainBranch.push({
-      specialMessage: messageToSend
+      notSoNiceMessage: messageToSend
     });
   })
+
+
+
 
   // Recieve Data from Firebase
   var getDataFromFirebase = function() {

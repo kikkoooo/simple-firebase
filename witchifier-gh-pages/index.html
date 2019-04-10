@@ -1,0 +1,44 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <link rel="dns-prefetch" href="//cdnjs.cloudflare.com">
+  <link rel="dns-prefetch" href="//ajax.googleapis.com">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <title>Witchifier</title>
+  <meta name="description" content="Witchify what you type">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/normalize/3.0.1/normalize.min.css">
+  <link rel="stylesheet" href="assets/css/main.css">
+</head>
+<body>
+  <textarea placeholder="" id="witchifier-input"></textarea>
+  <script src="//ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+  <script src="assets/js/jquery.autosize.js"></script>
+  <script src="assets/js/faketype/jquery.faketype.js"></script>
+  <script src="assets/js/bililiteRange.js"></script>
+  <script src="assets/js/jquery.sendkeys.js"></script>
+  <script src="assets/js/jquery.witchifier.js"></script>
+  <script src="assets/js/witchifyplaceholder.js"></script>
+  
+  <script type="text/javascript">
+  $(function() {
+    $('#witchifier-input')
+      .witchify()
+      .autosize({
+        // keep scroll area up to date with
+        // witchification
+        callback: function() {
+          $('html, body').scrollTop($(this).height());
+        }
+      })
+      .on( 'paste', function(event) {
+        // make sure that we get a resize
+        // when we paste stuff in
+        $(this).trigger('autosize');
+      })
+      .focus();
+  });
+  </script>
+</body>
+</html>

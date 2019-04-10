@@ -1,0 +1,3 @@
+[submodule "assets/js/faketype"]
+	path = assets/js/faketype
+	url = https://github.com/discom4rt/jquery.faketype.git

@@ -1,0 +1,28 @@
+*  {
+  box-sizing: border-box;
+  background-color: white;
+  color: black;
+}
+
+body,
+html {
+  width: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  padding: 1px;
+  font-family: "HelveticaNeueBold", "HelveticaNeue-Bold", "Helvetica Neue Bold", "HelveticaNeue", "Helvetica Neue", 'TeXGyreHerosBold', "Helvetica", "Tahoma", "Geneva", "Arial", sans-serif;
+  font-weight: bold;
+}
+
+#witchifier-input {
+  border: none;
+  resize: none;
+  width: 100%;
+  font-size: 500%;
+  line-height: 125%;
+  outline: 0;
+  min-height: 300px;
+}
